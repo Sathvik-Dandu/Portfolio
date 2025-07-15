@@ -1,0 +1,138 @@
+.education-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.education-card {
+  width: 42%;
+  margin-left: 58%;
+  position: relative;
+  padding: 1.2rem;
+}
+
+.education-item:nth-child(even) .education-card {
+  margin-left: 0;
+  margin-right: 58%;
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.education-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.education-info h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.education-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.education-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.detail-item svg {
+  color: var(--accent-color);
+}
+
+.gpa {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 15px;
+  }
+
+  .timeline-marker {
+    left: 15px;
+  }
+
+  .education-card {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    padding: 1rem;
+  }
+
+  .education-item:nth-child(even) .education-card {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+
+  .education-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .education-details {
+    justify-content: center;
+  }
+} 
