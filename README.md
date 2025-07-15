@@ -35,5 +35,8 @@ Because every coder deserves a home on the web! This site is my digital handshak
 Want to chat, collaborate, or just say hi? Use the Contact section or email me at: **dsathvik204@gmail.com**
 
 ---
+## 🚀 Experience It Live
+Check out the portfolio in action:
+👉 [https://sathvikdandu.vercel.app/](https://sathvikdandu.vercel.app/)
 
 > "Building, learning, and sharing—one project at a time. Thanks for stopping by!"
