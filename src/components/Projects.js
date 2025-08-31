@@ -21,6 +21,7 @@ const Projects = () => {
       technologies: ["React 18", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
       image: "https://repository-images.githubusercontent.com/285477529/64000a00-1bca-11eb-8abe-52d910158400",
       github: "https://github.com/Sathvik-Dandu/crushit-file-forge",
+  
       live: "https://crushitt.netlify.app/",
       category: "fullstack"
     },
