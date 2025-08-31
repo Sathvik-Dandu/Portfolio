@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLaptop, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
 import './Projects.css';
-import crushitImage from '../Images/Crushit.png';
 
 const Projects = () => {
   const projectsData = [
