@@ -115,7 +115,7 @@
 
 .project-content {
   padding: 1.2rem;
-  margin-top: 1.5rem; /* Added to prevent overlap with category badge */
+  margin-top: 2rem; /* Increased to prevent overlap with category badge and image */
 }
 
 .project-title {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLaptop, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
 import './Projects.css';
+import crushitImage from '../Images/Crushit.png';
 
 const Projects = () => {
   const projectsData = [
@@ -16,12 +17,12 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Real-Time Chat Application",
-      description: "A collaborative chat application with real-time messaging, file sharing, and group chat functionality. Built with Socket.io for real-time communication and React for the frontend.",
-      technologies: ["React", "Socket.io", "Node.js", "MongoDB", "Express", "Material-UI"],
-      image: "https://via.placeholder.com/400x250/238636/ffffff?text=Chat+App",
-      github: "#",
-      live: "#",
+      title: "CrushIt File Forge",
+      description: "CrushIt File Forge is a smart file compression tool that reduces the size of all types of files without losing quality. Once compressed, it instantly generates a QR code so users can easily download and share the files on any other device.",
+      technologies: ["React 18", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
+      image: "https://repository-images.githubusercontent.com/285477529/64000a00-1bca-11eb-8abe-52d910158400",
+      github: "https://github.com/Sathvik-Dandu/crushit-file-forge",
+      live: "https://crushitt.netlify.app/",
       category: "fullstack"
     },
     {
