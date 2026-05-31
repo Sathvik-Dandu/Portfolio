@@ -1,38 +1,38 @@
 import React from 'react';
-import { FaCode, FaDatabase, FaLanguage, FaCloud, FaPalette, FaChartLine } from 'react-icons/fa';
+import { FaCode, FaDatabase, FaGlobe, FaCloud, FaTools, FaCogs } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = () => {
   const skillsData = {
-    languages: {
-      title: "Programming Languages",
-      icon: <FaLanguage />,
-      skills: ["Python", "Java", "C (Programming Language)"]
-    },
-    webTech: {
-      title: "Web Technologies",
+    programming: {
+      title: "Programming",
       icon: <FaCode />,
-      skills: ["MERN Stack", "WordPress Design", "Web Design", "Web Development"]
+      skills: ["Java", "Python", "JavaScript"]
+    },
+    webDev: {
+      title: "Web Development",
+      icon: <FaGlobe />,
+      skills: ["MERN Stack", "HTML", "CSS", "WordPress"]
+    },
+    database: {
+      title: "Database",
+      icon: <FaDatabase />,
+      skills: ["SQL", "MongoDB"]
     },
     cloud: {
       title: "Cloud & Platforms",
       icon: <FaCloud />,
-      skills: ["Amazon Web Services (AWS)", "Salesforce Developer"]
+      skills: ["Salesforce (Admin & Developer)", "AWS"]
     },
-    databases: {
-      title: "Databases",
-      icon: <FaDatabase />,
-      skills: ["MySQL", "Database Management System (DBMS)"]
+    tools: {
+      title: "Tools & Technologies",
+      icon: <FaTools />,
+      skills: ["Git", "GitHub", "VS Code", "WordPress", "Canva"]
     },
-    marketing: {
-      title: "Digital Marketing",
-      icon: <FaChartLine />,
-      skills: ["Search Engine Optimization (SEO)", "Off-Page SEO", "Digital Marketing"]
-    },
-    design: {
-      title: "Design Tools",
-      icon: <FaPalette />,
-      skills: ["Canva"]
+    concepts: {
+      title: "Core Concepts",
+      icon: <FaCogs />,
+      skills: ["OOPs", "DBMS"]
     }
   };
 
