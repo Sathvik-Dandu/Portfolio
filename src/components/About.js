@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaCode, FaTerminal } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaTerminal } from 'react-icons/fa';
 import profileImage from '../Images/Myself.jpeg';
 import './About.css';
 
@@ -24,7 +24,7 @@ const About = () => {
             </p>
             
             <div className="code-block">
-              <div className="code-comment">// Current Status</div>
+              <div className="code-comment">{/* Current Status */}</div>
               <div><span className="code-keyword">status</span>: <span className="code-string">"Learning & Building"</span>,</div>
               <div><span className="code-keyword">location</span>: <span className="code-string">"India"</span>,</div>
               <div><span className="code-keyword">interests</span>: [<span className="code-string">"Web Dev"</span>, <span className="code-string">"AI/ML"</span>, <span className="code-string">"Open Source"</span>]</div>

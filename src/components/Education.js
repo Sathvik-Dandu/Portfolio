@@ -9,7 +9,7 @@ const Education = () => {
       degree: "Bachelor of Technology - BTech, Computer Science",
       institution: "Malla Reddy University",
       location: "India",
-      period: "Sep 2022 - May 2026 (Expected)",
+      period: "Sep 2022 - May 2026",
       description: "Currently pursuing Bachelor of Technology in Computer Science with focus on software development, algorithms, data structures, and modern programming technologies. Maintaining strong academic performance while participating in coding competitions and technical projects.",
       gpa: "In Progress"
     },

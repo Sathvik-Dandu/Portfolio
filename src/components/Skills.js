@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCode, FaDatabase, FaTools, FaLanguage, FaServer, FaMobile, FaCloud, FaPalette, FaChartLine } from 'react-icons/fa';
+import { FaCode, FaDatabase, FaLanguage, FaCloud, FaPalette, FaChartLine } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = () => {

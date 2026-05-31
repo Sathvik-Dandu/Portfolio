@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaTerminal, FaCode } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCode } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -70,7 +70,7 @@ const Contact = () => {
             </p>
             
             <div className="code-block">
-              <div className="code-comment">// Contact Information</div>
+              <div className="code-comment">{/* Contact Information */}</div>
               <div><span className="code-keyword">email</span>: <span className="code-string">"dsathvik204@gmail.com"</span>,</div>
               <div><span className="code-keyword">phone</span>: <span className="code-string">"+91 7396484816"</span>,</div>
               <div><span className="code-keyword">location</span>: <span className="code-string">"India"</span>,</div>

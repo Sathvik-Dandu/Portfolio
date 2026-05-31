@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaLaptop, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCode, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
