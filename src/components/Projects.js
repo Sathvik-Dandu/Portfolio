@@ -1,104 +1,46 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
-import './Projects.css';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import crushItImage from '../Images/Crushit.png';
 
-const Projects = () => {
-  const projectsData = [
-    {
-      id: 1,
-      title: "CertiChain",
-      description: "A blockchain-based certificate verification system that uses Ethereum, IPFS, and SHA-256 hashing to securely store and instantly verify tamper-proof digital certificates.",
-      technologies: ["Blockchain", "Cryptography", "Ethereum", "IPFS"],
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoCfTC0Xppo-I-jqMXPvpTF7Oqmh972heYZQ&s",
-      github: "https://github.com/Sathvik-Dandu/Certichain",
-      live: "https://certiichain.vercel.app/",
-      category: "blockchain"
-    },
-    {
-      id: 2,
-      title: "CarbonCalc - CO₂ Emission Predictions",
-      description: "🌱 CarbonCalc – Smarter CO₂ Emission Predictions Made Easy. CarbonCalc is an eco-conscious web application designed to help users analyze, predict, and visualize CO₂ emissions based on vehicle specifications.",
-      technologies: ["Python", "Streamlit", "Machine Learning", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn"],
-      image: "https://www.ecomatcher.com/wp-content/uploads/2020/09/Carbon-Footprint-copy.jpg",
-      github: "https://github.com/Sathvik-Dandu/CarbonCalc",
-      live: "https://carboncalc-ml.streamlit.app/",
-      category: "machine-learning"
-    },
-    {
-      id: 3,
-      title: "CrushIt File Forge",
-      description: "CrushIt File Forge is a smart file compression tool that reduces the size of all types of files without losing quality. Once compressed, it instantly generates a QR code so users can easily download and share the files on any other device.",
-      technologies: ["React 18", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
-      image: "https://repository-images.githubusercontent.com/285477529/64000a00-1bca-11eb-8abe-52d910158400",
-      github: "https://github.com/Sathvik-Dandu/crushit-file-forge",
-      live: "https://crushitt.netlify.app/",
-      category: "fullstack"
-    },
+const projects = [
+  { title: 'CertiChain', kind: 'BLOCKCHAIN / VERIFICATION', summary: 'A certificate verification system combining blockchain, IPFS and SHA-256 hashing, with AI-assisted fraud detection.', technologies: ['Ethereum', 'IPFS', 'SHA-256', 'AI-assisted detection'], github: 'https://github.com/Sathvik-Dandu/Certichain', live: 'https://certiichain.vercel.app/', glyph: 'CERT / 01' },
+  { title: 'CrushIt File Forge', kind: 'FULL STACK / UTILITIES', summary: 'A file compression tool that generates a QR code to make sharing compressed files between devices easier.', technologies: ['React', 'TypeScript', 'Supabase', 'Tailwind CSS'], github: 'https://github.com/Sathvik-Dandu/crushit-file-forge', live: 'https://crushitt.netlify.app/', image: crushItImage, glyph: 'FILE / QR' },
+  { title: 'CarbonCalc', kind: 'DATA / VISUALIZATION', summary: 'A Python application for analyzing and visualizing estimated vehicle emissions from vehicle specifications.', technologies: ['Python', 'Streamlit', 'Pandas', 'Scikit-learn'], github: 'https://github.com/Sathvik-Dandu/CarbonCalc', live: 'https://carboncalc-ml.streamlit.app/', glyph: 'CO₂ / DATA' }
+];
 
-  ];
+const ProjectVisual = ({ project, index, total }) => (
+  <div className={`project-visual visual-${index + 1}`} role="img" aria-label={`${project.title} abstract visual`}>
+    {project.image ? <img className="project-screenshot" src={project.image} alt="CrushIt File Forge preview" /> : <>
+      <div className="visual-topbar"><span className="visual-controls"><i /><i /><i /></span><span className="mono">SATHVIK / LAB_{String(index + 1).padStart(2, '0')}</span><span className="visual-status">●</span></div>
+      <div className="visual-canvas"><div className="visual-crosshair" aria-hidden="true">+</div><span className="visual-glyph mono">{project.glyph}</span><span className="visual-caption mono">FIELD NOTE&nbsp; / &nbsp;{String(index + 1).padStart(2, '0')}</span><div className="visual-lines"><i /><i /><i /></div></div>
+    </>}
+    <span className="project-index mono">{String(index + 1).padStart(2, '0')} <b>/ {String(total).padStart(2, '0')}</b></span>
+  </div>
+);
 
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'fullstack':
-        return <FaCode />;
-      case 'frontend':
-        return <FaCode />;
-      case 'backend':
-        return <FaServer />;
-      case 'mobile':
-        return <FaMobile />;
-      case 'machine-learning':
-        return <FaDatabase />;
-      default:
-        return <FaCode />;
-    }
-  };
-
-  return (
-    <section id="projects" className="section">
-      <div className="container">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">Some of my recent development work and personal projects</p>
-
-        <div className="projects-grid">
-          {projectsData.map((project) => (
-            <div key={project.id} className="project-card card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-links">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" title="View Code">
-                      <FaGithub />
-                    </a>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" title="Live Demo">
-                      <FaExternalLinkAlt />
-                    </a>
-                  </div>
-                </div>
-                <div className="project-category">
-                  {getCategoryIcon(project.category)}
-                  <span>{project.category}</span>
-                </div>
-              </div>
-
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+const Projects = () => (
+  <section id="projects" className="section projects-section">
+    <div className="container">
+      <div className="projects-heading"><div><p className="mono eyebrow">02 / SELECTED WORK</p><h2 className="section-title">Built to<br /><em>be useful.</em></h2></div><p className="projects-intro">A growing collection of software projects, experiments, and practical tools.</p></div>
+      <div className="projects-list">
+        {projects.map((project, index) => (
+          <article key={project.title} className={`project-showcase ${index % 2 ? 'project-reverse' : ''}`}>
+            <ProjectVisual project={project} index={index} total={projects.length} />
+            <div className="project-content">
+              <p className="mono project-kind">{project.kind}</p>
+              <h3 className="project-title">{project.title}<span className="project-title-arrow"><FaExternalLinkAlt /></span></h3>
+              <p className="project-description">{project.summary}</p>
+              <ul className="project-technologies" aria-label={`${project.title} technologies`}>{project.technologies.map((tech) => <li key={tech}>{tech}</li>)}</ul>
+              {(project.github || project.live) && <div className="project-links">
+                {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> GitHub</a>}
+                {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt aria-hidden="true" /> Live demo</a>}
+              </div>}
             </div>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
-export default Projects; 
+export default Projects;

@@ -1,84 +1,20 @@
 import React from 'react';
-import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import './Education.css';
 
-const Education = () => {
-  const educationData = [
-    {
-      id: 1,
-      degree: "Bachelor of Technology - BTech, Computer Science",
-      institution: "Malla Reddy University",
-      location: "India",
-      period: "Sep 2022 - May 2026",
-      description: "Currently pursuing Bachelor of Technology in Computer Science with focus on software development, algorithms, data structures, and modern programming technologies. Maintaining strong academic performance while participating in coding competitions and technical projects.",
-      gpa: "In Progress"
-    },
-    {
-      id: 2,
-      degree: "Intermediate, MPC",
-      institution: "Narayana Junior College",
-      location: "India",
-      period: "Aug 2020 - Jun 2022",
-      description: "Completed intermediate education with Mathematics, Physics, and Computer Science (MPC) stream. Developed strong foundation in mathematics and sciences essential for computer science studies.",
-      gpa: "Completed"
-    },
-    {
-      id: 3,
-      degree: "Grade X",
-      institution: "Vignan Global Gen School",
-      location: "India",
-      period: "2017 - 2020",
-      description: "Completed secondary education with focus on core subjects including mathematics, sciences, and computer fundamentals. Established strong academic foundation for higher studies.",
-      gpa: "Completed"
-    }
-  ];
+const entries = [
+  { year: '2022', label: 'B.TECH / COMPUTER SCIENCE AND ENGINEERING', institution: 'Malla Reddy University, Hyderabad', result: 'CGPA 9.09' },
+  { year: '2020', label: 'INTERMEDIATE / MPC', institution: 'Narayana Junior College, Kukatpally', result: '98%' },
+  { year: '2007', label: 'SECONDARY SCHOOL', institution: 'Vignan Global Gen School, Madinaguda', result: '92.4%' }
+];
 
-  return (
-    <section id="education" className="section">
-      <div className="container">
-        <h2 className="section-title">Education</h2>
-        <p className="section-subtitle">My academic journey and achievements</p>
-        
-        <div className="education-timeline">
-          {educationData.map((education, index) => (
-            <div key={education.id} className="education-item">
-              <div className="timeline-marker"></div>
-              <div className="education-card card">
-                <div className="education-header">
-                  <div className="education-icon">
-                    <FaGraduationCap />
-                  </div>
-                  <div className="education-info">
-                    <h3 className="degree">{education.degree}</h3>
-                    <p className="institution">{education.institution}</p>
-                  </div>
-                </div>
-                
-                <div className="education-details">
-                  <div className="detail-item">
-                    <FaCalendarAlt />
-                    <span>{education.period}</span>
-                  </div>
-                  <div className="detail-item">
-                    <FaMapMarkerAlt />
-                    <span>{education.location}</span>
-                  </div>
-                  <div className="detail-item">
-                    <span className="gpa-label">Status:</span>
-                    <span className="gpa">{education.gpa}</span>
-                  </div>
-                </div>
-                
-                <p className="education-description">
-                  {education.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+const Education = () => (
+  <section id="education" className="section education-section">
+    <div className="container">
+      <div className="section-heading"><p className="mono eyebrow">05 / EDUCATION</p><h2 className="section-title">The long<br /><em>build.</em></h2></div>
+      <div className="education-timeline">
+        {entries.map((entry, index) => <article className="education-row" key={entry.year}><span className="education-year mono">{entry.year}</span><span className="education-node" aria-hidden="true">{index === 0 ? '●' : '○'}</span><div><p className="mono education-label">{entry.label}</p><h3>{entry.institution}</h3></div><strong className="mono education-result">{entry.result}</strong></article>)}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
-export default Education; 
+export default Education;

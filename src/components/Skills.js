@@ -1,46 +1,44 @@
 import React from 'react';
-import { FaCode, FaDatabase, FaGlobe, FaCloud, FaTools, FaCogs } from 'react-icons/fa';
-import './Skills.css';
+import { FaCode, FaDatabase, FaLanguage, FaCloud, FaPalette, FaChartLine } from 'react-icons/fa';
 
 const Skills = () => {
   const skillsData = {
-    programming: {
-      title: "Programming",
+    languages: {
+      title: "01 / Languages",
+      icon: <FaLanguage />,
+      skills: ["Python", "Java", "C", "JavaScript"]
+    },
+    webTech: {
+      title: "02 / Web",
       icon: <FaCode />,
-      skills: ["Java", "Python", "JavaScript"]
-    },
-    webDev: {
-      title: "Web Development",
-      icon: <FaGlobe />,
-      skills: ["MERN Stack", "HTML", "CSS", "WordPress"]
-    },
-    database: {
-      title: "Database",
-      icon: <FaDatabase />,
-      skills: ["SQL", "MongoDB"]
+      skills: ["React", "MERN stack", "TypeScript", "WordPress"]
     },
     cloud: {
-      title: "Cloud & Platforms",
+      title: "03 / Platforms",
       icon: <FaCloud />,
-      skills: ["Salesforce (Admin & Developer)", "AWS"]
+      skills: ["AWS", "Salesforce"]
     },
-    tools: {
-      title: "Tools & Technologies",
-      icon: <FaTools />,
-      skills: ["Git", "GitHub", "VS Code", "WordPress", "Canva"]
+    databases: {
+      title: "04 / Data",
+      icon: <FaDatabase />,
+      skills: ["MySQL", "MongoDB", "Supabase"]
     },
-    concepts: {
-      title: "Core Concepts",
-      icon: <FaCogs />,
-      skills: ["OOPs", "DBMS"]
+    marketing: {
+      title: "05 / Beyond code",
+      icon: <FaChartLine />,
+      skills: ["SEO", "Digital marketing"]
+    },
+    design: {
+      title: "06 / Design",
+      icon: <FaPalette />,
+      skills: ["Canva"]
     }
   };
 
   return (
     <section id="skills" className="section">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
-        <p className="section-subtitle">Technologies and tools in my development stack</p>
+        <div className="section-heading"><p className="mono eyebrow">04 / TOOLKIT</p><h2 className="section-title">The things<br /><em>I work with.</em></h2><p className="section-subtitle">Tools and technologies I’ve used across coursework and projects.</p></div>
         
         <div className="skills-grid">
           {Object.entries(skillsData).map(([key, category]) => (
